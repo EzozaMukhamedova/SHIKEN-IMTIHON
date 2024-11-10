@@ -1,0 +1,17 @@
+.nav__btn {
+  width: 114px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px;
+  background-color: #ffd063;
+  color: #013a4c;
+
+  &__log {
+    width: 75px;
+    height: 40px;
+    background-color: #ffffff;
+    border: 1px solid #346170;
+    border-radius: 4px;
+    color: $TEXT-COLOR;
+  }
+}

@@ -1,0 +1,31 @@
+.belive-your-eyes {
+  background-image: url(../../assets/images/balive-your-eyes-bg-img.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 128px 144px;
+
+  &__content {
+    padding: 173px 0;
+
+    h1 {
+      font-size: 73px;
+      font-weight: 700;
+      line-height: 78px;
+      letter-spacing: 2px;
+      color: $TEXT-COLOR-WHITE;
+      margin-bottom: 31px;
+    }
+    p {
+      font-size: 26px;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: 0.5px;
+      color: $TEXT-COLOR-WHITE;
+      margin-bottom: 25px;
+    }
+    &__btn {
+      @include button-style(114px, 40px, $BUTTON-COLOR, $TEXT-COLOR, 4px);
+    }
+  }
+}

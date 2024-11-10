@@ -1,0 +1,63 @@
+.more-from-oneflow {
+  margin: 255px 0 128px 0;
+  h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 54px;
+    text-align: left;
+    color: $TEXT-COLOR;
+    margin-bottom: 48px;
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 32px;
+  }
+  &__left__card,
+  &__right__card {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+    &__image {
+      overflow: hidden;
+      position: relative;
+      width: 560px;
+      height: 315px;
+    }
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    }
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      padding: 18px 0 19px 0;
+      color: $TEXT-COLOR;
+    }
+    h2 {
+      font-size: 31px;
+      font-weight: 400;
+      line-height: 40px;
+      color: $TEXT-COLOR;
+      margin-bottom: 21px;
+    }
+    img {
+      transition: transform 0.3s ease-in-out;
+
+      &:hover {
+        border-radius: 8px;
+        transform: scale(1.1);
+      }
+    }
+    &__btn {
+      width: 154px;
+      height: 50px;
+      cursor: pointer;
+      margin-bottom: 16px;
+    }
+  }
+}

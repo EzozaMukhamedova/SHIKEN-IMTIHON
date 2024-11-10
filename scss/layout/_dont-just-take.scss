@@ -1,0 +1,90 @@
+.dont-just-take {
+  margin: 127px 144px 150px 144px;
+  &__wrapper {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 14px;
+  }
+  h1 {
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 54px;
+    letter-spacing: 0.4000000059604645px;
+    text-align: left;
+    color: $TEXT-COLOR;
+  }
+  &__card {
+    margin: 56px 0 102px 0;
+    padding: 65px 32px;
+    border: 1px solid #d6dfe2;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    img {
+      transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+      display: block;
+      width: 100%;
+      height: auto;
+
+      &:hover {
+        filter: brightness(1.1);
+        transform: scale(1.1);
+      }
+    }
+    p {
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 24px;
+      text-align: left;
+      color: $TEXT-COLOR;
+      margin-bottom: 18px;
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: darken($TEXT-COLOR, 40%);
+      }
+    }
+    span {
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 18px;
+      text-align: left;
+      color: #89285b;
+      transition: color 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        color: darken(#89285b, 50%);
+      }
+    }
+
+    &__sub {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      margin-top: 98px;
+
+      p {
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 20px;
+        color: $TEXT-COLOR;
+        transition: color 0.3s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+          color: lighten($TEXT-COLOR, 20%);
+        }
+      }
+    }
+    &:nth-child(2) &__sub {
+      margin-top: 74px;
+    }
+  }
+}

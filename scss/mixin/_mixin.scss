@@ -1,0 +1,55 @@
+@mixin button-style(
+  $width: 127px,
+  $height: 40px,
+  $bg-color: #ffd063,
+  $text-color: #fff,
+  $border-radius: 4px,
+  $border: none
+) {
+  width: $width;
+  height: $height;
+  background-color: $bg-color;
+  color: $text-color;
+  border-radius: $border-radius;
+  border: $border;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+
+  &:hover {
+    color: $TEXT-COLOR-WHITE;
+    background-image: linear-gradient(
+      to right,
+      lighten($bg-color, 10%),
+      darken($bg-color, 10%)
+    );
+    filter: drop-shadow(2px 4px 3px rgba(103, 71, 1, 0.183));
+  }
+}
+
+.primary-button {
+  @include button-style(127px, 40px, $TEXT-COLOR, $TEXT-COLOR-WHITE);
+}
+
+.secondary-button {
+  @include button-style(114px, 40px, $BUTTON-COLOR, $TEXT-COLOR, 6px);
+}
+
+.border-button {
+  @include button-style(
+    114px,
+    40px,
+    transparent,
+    $TEXT-COLOR,
+    6px,
+    1px solid $TEXT-COLOR
+  );
+
+  &:hover {
+    background-color: $TEXT-COLOR;
+    color: $TEXT-COLOR-WHITE;
+    box-shadow: 0 4px 8px rgba($TEXT-COLOR, 0.4);
+  }
+}

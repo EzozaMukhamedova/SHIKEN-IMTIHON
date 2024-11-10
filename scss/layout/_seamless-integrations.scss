@@ -1,0 +1,67 @@
+.seamless-integrations {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 0 38px;
+    margin-top: 216px;
+  }
+  &__right {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    transform: translateY(-66px);
+    gap: 24px;
+
+    img {
+      width: 72px;
+      height: 72px;
+      margin: 50px;
+      transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+        filter: brightness(1.2);
+        cursor: pointer;
+      }
+    }
+    &__logo__left {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-top: 70px;
+    }
+    &__logo__center {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    &__logo__right {
+      display: flex;
+      flex-direction: column;
+      margin-top: 70px;
+      gap: 24px;
+    }
+  }
+  &__left {
+    padding: 131px 0;
+    h1 {
+      font-size: 72px;
+      font-weight: 400;
+      line-height: 72px;
+      letter-spacing: 0.4000000059604645px;
+      text-align: left;
+      color: $TEXT-COLOR;
+      margin-bottom: 30px;
+    }
+    p {
+      font-size: 21px;
+      font-weight: 400;
+      line-height: 28px;
+      text-align: left;
+      color: $TEXT-COLOR;
+      margin-bottom: 18px;
+    }
+    &__btn {
+      @include button-style(200px, 50px, $BUTTON-COLOR, $TEXT-COLOR, 4px);
+    }
+  }
+}

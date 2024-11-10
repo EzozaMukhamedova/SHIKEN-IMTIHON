@@ -1,0 +1,65 @@
+.complete-platform {
+  background-image: url(../../assets/images/complete-platform-bg-im.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  height: 2432px;
+  padding: 127px 0 583px 0;
+  h1 {
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 80px;
+    letter-spacing: 0.699999988079071px;
+    text-align: center;
+    color: $TEXT-COLOR;
+  }
+  &__cart {
+    margin-top: 149px;
+  }
+  &__content {
+    margin-bottom: 90px;
+    img {
+      transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+      display: block;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        filter: brightness(1.2);
+      }
+    }
+    &:nth-child(2) {
+      float: left;
+      height: 397px;
+    }
+    &__btn {
+      @include button-style(127px, 40px, $TEXT-COLOR, $TEXT-COLOR-WHITE);
+    }
+    width: 624px;
+    height: 373px;
+    padding: 0 8px 32px 96px;
+    float: right;
+    img {
+      width: 109px;
+      height: 109px;
+      margin-bottom: 15px;
+    }
+    h2 {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 54px;
+      letter-spacing: 0.4000000059604645px;
+      color: $TEXT-COLOR;
+      margin-bottom: 34px;
+    }
+    p {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+      color: $TEXT-COLOR;
+      margin-bottom: 17px;
+    }
+  }
+}

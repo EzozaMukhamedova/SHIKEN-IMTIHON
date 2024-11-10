@@ -1,0 +1,239 @@
+.next-trick {
+  margin-bottom: 24px;
+
+  &__hover__card {
+    background-color: #0f5987;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.7s ease-in-out, transform 0.5s ease-in-out;
+    border-radius: 8px;
+    &__right {
+      &:hover {
+        transform: scale(2);
+      }
+    }
+    &:hover {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    &__wrapper {
+      display: grid;
+      grid-template-rows: auto auto auto;
+      gap: 107px;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 0 87px 0;
+    }
+
+    h3 {
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 48px;
+      color: $TEXT-COLOR-WHITE;
+      margin-bottom: 9px;
+      text-align: center;
+    }
+
+    &__sub {
+      width: 135px;
+      height: 40px;
+      border-radius: 4px;
+      border: 1px solid $TEXT-COLOR-WHITE;
+      background-color: #0f5987;
+      color: $TEXT-COLOR-WHITE;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken(#0f5987, 10%);
+      }
+
+      &__card-image {
+        border-radius: 0, 0;
+      }
+    }
+
+    &__sup {
+      width: 104px;
+      height: 21px;
+      font-size: 11px;
+      font-weight: 400;
+      line-height: 11px;
+      color: $TEXT-COLOR-WHITE;
+      background-color: #187bb7;
+      border-radius: 2px;
+      border: none;
+      cursor: pointer;
+      margin: 0 16px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: lighten(#187bb7, 10%);
+      }
+    }
+  }
+
+  &__sub__card {
+    position: relative;
+    background-color: $TEXT-COLOR;
+    margin: 24px 0 47px;
+    overflow: hidden;
+    border-radius: 0 0 8px 8px;
+    transition: all 2000ms;
+    &:nth-child(2) {
+      background-color: #d0b296;
+    }
+
+    &:hover {
+      border-radius: 8px;
+    }
+
+    &:hover .next-trick__hover__card {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    &:nth-child(2) {
+      .next-trick__hover__card {
+        background-color: #d0b296;
+   &__sup{
+    background-color: #6d5640;
+   }
+      }
+    }
+
+    &:nth-child(3) {
+      background-color: #f2dce4;
+
+      .next-trick__hover__card {
+        background-color: #f2dce4;
+      }
+
+      .next-trick__sub__card__content h2,
+      span {
+        color: #013a4c;
+      }
+
+      .next-trick__sub__card__content__btn {
+        background-color: #b73d8b;
+        color: #ffffff;
+      }
+    }
+
+    &:nth-child(1) {
+      .next-trick__sub__card__content h2 {
+        margin-bottom: 69px;
+      }
+    }
+
+    &__content {
+      padding: 25px 24px;
+
+      h2 {
+        color: #ffffff;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0.4px;
+        margin-top: 18px;
+        margin-bottom: 37px;
+      }
+
+      &__btn {
+        @include button-style(47px, 21px, $TEXT-COLOR-WHITE, $TEXT-COLOR, 2px);
+        padding: 4px 8px 6px 8px;
+        font-size: 11px;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: darken($TEXT-COLOR, 10%);
+        }
+      }
+    }
+
+    &__wrapper {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: 20px;
+    }
+
+    &__info-bar {
+      font-size: 11px;
+      font-weight: 400;
+      line-height: 16px;
+      color: #ffffff;
+    }
+  }
+
+  &__card {
+    background-color: #f2dce4;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: auto auto;
+
+    &__left {
+      padding: 48px 96px 0 32px;
+
+      h2 {
+        font-size: 48px;
+        font-weight: 400;
+        line-height: 54px;
+        letter-spacing: 0.4px;
+        text-align: left;
+        color: $TEXT-COLOR;
+        margin-top: 63px;
+      }
+
+      &__btn {
+        @include button-style(51px, 21px, #b73d8b, $TEXT-COLOR-WHITE, 2px);
+        font-size: 11px;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: lighten(#b73d8b, 10%);
+        }
+      }
+    }
+  }
+
+  &__title {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    padding-bottom: 26px;
+    margin-top: 69px;
+    margin-bottom: 48px;
+
+    h1 {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 54px;
+      letter-spacing: 0.4px;
+      color: $TEXT-COLOR;
+    }
+
+    &__btn {
+      @include button-style(146px, 50px, $BUTTON-COLOR, $TEXT-COLOR, 4px);
+    }
+  }
+}
+
+.next-trick__card__right {
+  display: flex;
+  img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+      filter: brightness(1.1);
+    }
+  }
+}
